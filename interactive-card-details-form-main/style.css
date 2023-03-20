@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.purple-bg{
+    position: relative;
+    padding: 0rem 5rem;
+    background-image: url('./images/bg-main-desktop.png');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.purple-bg img{
+    width: 28rem;
+}
+
+.purple-img{
+    width: 28rem;
+    padding: 2rem 1rem;
+    border-radius: 0.7rem;
+    transform: translateX(14rem);
+    background-image: url('./images/bg-card-front.png');
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.num{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.purple-img img{
+    width: 4rem;
+}
+
+.num-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.purple-bg img:nth-child(2){
+    transform: translateX(22rem);
+}
+
+.input-btn{
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: hsl(278, 68%, 11%);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+}
+
+.input{
+    margin: auto;
+    position: relative;
+}
+
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.input-fields label{
+    color: hsl(278, 68%, 11%);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.name,.number,.date,.cvc{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.exp{
+    display: flex;
+    gap: 1rem;
+}
+
+input{
+    padding: 0.7rem;
+    outline: none;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+input:focus{
+    border-image: linear-gradient(hsl(249, 99%, 64%),hsl(278, 94%, 30%)) 1;
+    border-width: 2px;
+}
+
+.error input{
+    border-color: red;
+}
+
+.input-fields input::placeholder{
+    color: hsl(270, 3%, 87%);
+}
+
+.input-btn{
+    margin-top: 3.5rem;
+}
+
+.thank{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    display: noe;
+}
+
+.thank h3{
+    color: hsl(278, 68%, 11%);
+    font-weight: 600;
+    font-size: 2.6rem;
+}
+
+.thank p{
+    color:  hsl(279, 6%, 55%);
+    font-size: 1.3rem;
+}
+
+.thank-btn{
+    margin-top:2rem;
+    padding: 1rem 8rem;
+}
+
+
+@media(max-width: 1150px){
+    .purple-img{
+        transform: translateX(10rem);
+    }
+    
+    .purple-bg img:nth-child(2){
+        transform: translateX(15rem);
+    }
+}
+
+@media(max-width: 1050px){
+    .purple-img{
+        transform: translateX(6rem);
+    }
+
+    .purple-bg img:nth-child(2){
+        transform: translateX(10rem);
+    }
+}
+
+@media(max-width: 870px){
+    .purple-img{
+        transform: translateX(0);
+    }
+
+    .purple-bg img:nth-child(2){
+        transform: translateX(0);
+    }
+
+    .purple-bg{
+        flex-basis: 30%;
+    }
+
+    .purple-bg{
+        padding: 0rem 2rem;
+    }
+}
+
+@media(max-width: 750px){
+    .input input{
+        padding-right: 1rem;
+    }
+}
+
+@media(max-width: 700px){
+    .container{
+        display: grid;
+        grid-template-rows: 2fr 3fr;
+        max-width: 45rem;
+        row-gap: 12rem;
+        margin: auto;
+    }
+
+    .purple-bg{
+        background-image: url('./images/bg-main-mobile.png');
+        height: 120%;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .purple-img{
+        position: absolute;
+        bottom: -40%;
+        left: 10%;
+        z-index: 1;
+    }
+
+    .purple-bg img:nth-child(2){
+        position: absolute;
+        right: 5%;
+    }
+
+    .input-fields{
+        gap: 2rem;
+    }
+
+    .input{
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width: 550px){
+    .input-btn{
+        padding-top: 2rem;
+        font-size: 1.7rem;
+    }
+}
+
+@media(max-width: 370px){
+    .input{
+        padding-left: 1rem;
+    }
+    input{
+        width: 90%;
+    }
+
+    .input-btn{
+        padding: 1rem;
+        width: 20rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+}
